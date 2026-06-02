@@ -1,0 +1,20 @@
+
+
+pandas
+numpy
+matplotlib
+statistics
+scikit-learn 
+feature-engine
+scipy
+shap
+keras
+xgboost
+lifelines
+tensorflow
+scikeras
+streamlit
+plotly
+orjson
+graphviz
+# TERMINAL:   pip install -r requirements.txt

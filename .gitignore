@@ -1,0 +1,21 @@
+# virtual environments
+.venv/
+
+# folder / files to ignore
+graphing_code.py
+modified Charts.py
+huggingface_upload_file.py
+
+files/
+outputs/
+
+# python cache
+__pycache__/
+*.pyc 
+
+# windows junk
+.DS_Store
+Thumbs.db
+
+
+
