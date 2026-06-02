@@ -20,7 +20,8 @@ def load_dict(file_name):
     file_path = hf_hub_download(
                 repo_id="lauren-cunningham-stack/churn-analysis-outputs-folder",
                 filename=file_name,
-                repo_type="dataset"
+                repo_type="dataset",
+                token = st.secrets['HF_TOKEN']
             )
 
     with open(file_path, "rb") as f:
@@ -31,7 +32,8 @@ def load_csv(file_name):
     file_path = hf_hub_download(
                 repo_id="lauren-cunningham-stack/churn-analysis-outputs-folder",
                 filename=file_name,
-                repo_type="dataset"
+                repo_type="dataset",
+                token = st.secrets['HF_TOKEN']
             )
 
     return pd.read_csv(file_path)
