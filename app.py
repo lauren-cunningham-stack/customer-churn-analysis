@@ -79,10 +79,6 @@ if side == 'Business Side':
     # --------------------------------------------------------  BUSINESS Main Page -------------------------------------------------------
     st.title('📱 User Retention & Churn Intelligence Platform')
 
-    #impage_path = 'Churn_Analysis_Project/other/social-media-logo-collection.jpg'
-    with st.container(horizontal_alignment='center'):
-        st.image('files/social-media-logo-collection.jpg', width=400)
-
     st.markdown("<div id='overview'></div>", unsafe_allow_html=True)
     st.header("Overview")
     st.write("""
