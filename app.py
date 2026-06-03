@@ -541,7 +541,6 @@ elif side == 'Nerd Side':
         """)
     st.sidebar.markdown("## Project Links")
     st.sidebar.markdown("[GitHub Repository](https://github.com/lauren-cunningham-stack/customer-churn-analysis)")
-    st.sidebar.markdown("[Live App](https://customer-churn-analysis-cdputwmhckphydt9duwvib.streamlit.app/)")
     apps = ['Other Apps','YouTube', 'Facebook', 'TikTok', 'WhatsApp', 'Helakuru']
     # --------------------------------------------------------  NERDS Main Page -------------------------------------------------------
     st.title('📱 Churn Prediction System')
