@@ -304,14 +304,6 @@ if side == 'Business Side':
                     suggesting that disengagement develops gradually rather than occurring immediately.
                 """)
             st.altair_chart(chart_cr + highlight_bump)
-            st.write("""
-                    When mapping retention behavior onto the SHAP-identified high-risk periods,
-                    a consistent pattern emerges:
-
-                    - Later-stage churn (Days 14–52) shows multiple re-engagement opportunities
-                    - Users often return briefly before fully disengaging
-                    - These windows represent recoverable churn behavior rather than immediate loss
-                    """)
             app_notes = {
                 'Other Apps':
                 "- Re-engagement spike around Day 16\n- Final activity spike between Days 36–47",
@@ -331,28 +323,34 @@ if side == 'Business Side':
                 'Helakuru':
                 "- Re-engagement spike around Day 16\n- Final activity spike between Days 36–47"
             }
-            st.markdown(app_notes[app])
+            #st.markdown(app_notes[app])
     
     st.write("""
-        These findings indicate that while later-stage churners exhibit clear recovery windows,
-        retention strategies alone are not sufficient to address early lifecycle drop-off.
+        When mapping retention behavior onto the SHAP-identified high-risk periods, a clear divergence in churn behavior emerges across user segments.
 
-        A significant portion of users disengage too early for re-engagement campaigns to be effective,
-        particularly within the first week of activity.
-        """)
+        For some cohorts, churn is not immediate. These users show distinct re-engagement windows after initial drop-off, typically around Days 14–19, 
+        followed by a final activity spike between Days 36–52 before complete disengagement. This pattern reflects recoverable churn behavior, where users 
+        intermittently re-enter the product before fully exiting, creating viable opportunities for timed re-engagement strategies.
 
-    st.write("""
-        This creates a natural split in the churn problem:
+        However, this recovery window is not present across all applications or user groups. In cases where the Day 14–19 reactivation window is absent, 
+        retention curves show a much more continuous decline in engagement with no meaningful mid-cycle recovery. In these scenarios, users progress from 
+        onboarding directly into sustained inactivity, and the later-stage “final activity spike” is also largely diminished or missing. This indicates a 
+        more irreversible churn pathway, where users disengage without returning to the product in meaningful intervals.
 
-        - Later-stage churners can be recovered through timed re-engagement strategies
-        - Early-stage churners require immediate detection and intervention before disengagement stabilizes
-
-        To address this, an Early Churn Detection System was developed to identify at-risk users
-        within the first days of activity, enabling proactive intervention during the onboarding phase.
-                          
+        These differences highlight two fundamentally different churn dynamics:
+        - Recoverable churn, where users exhibit delayed re-engagement and multiple intervention opportunities
+        - Non-recoverable churn, where engagement decays rapidly after onboarding with no observable recovery window
+        
+        As a result, retention strategies alone are insufficient to address early lifecycle attrition. While later-stage churners can be influenced through 
+        timed re-engagement efforts, early-stage churn requires immediate detection and intervention before engagement patterns fully collapse.
+        
+        To address this, an Early Churn Detection System was developed to identify at-risk users within the first few days of activity, enabling proactive 
+        intervention during the onboarding phase when churn trajectories are still malleable.
+        
         ---
-
+        
         """)
+
     # -------------------------------------------------------------------------------------  Early Prediction System -------------------------------------------------------
     st.markdown("<div id='real-time-churn-monitoring'></div>",
                 unsafe_allow_html=True)
