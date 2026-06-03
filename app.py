@@ -540,8 +540,8 @@ elif side == 'Nerd Side':
         🏗️ [Pipeline Architecture](#pipeline-architecture)
         """)
     st.sidebar.markdown("## Project Links")
-    st.sidebar.markdown("[GitHub Repository](https://github.com/your-repo)")
-    st.sidebar.markdown("[Live App](https://your-streamlit-app.streamlit.app)")
+    st.sidebar.markdown("[GitHub Repository](https://github.com/lauren-cunningham-stack/customer-churn-analysis)")
+    st.sidebar.markdown("[Live App](https://customer-churn-analysis-cdputwmhckphydt9duwvib.streamlit.app/)")
     apps = ['Other Apps','YouTube', 'Facebook', 'TikTok', 'WhatsApp', 'Helakuru']
     # --------------------------------------------------------  NERDS Main Page -------------------------------------------------------
     st.title('📱 Churn Prediction System')
